@@ -1,4 +1,11 @@
 # json-compactor
+Sometimes there is a need to figure out what is the part of json is actually used for data, and how much it is needed for schema.
+Also, sometimes with schemaless json there is a need to compress it (as compression may be too expensive).
+
+In order to figure out what is happening with json in this case, this test tool was created - it assembles the schema of json data and writes it as a type information, and tries to store data in json in a more optimal way. Below one can find description of the format. 
+
+## The simple way is to write schema and data in the json file separately. 
+
 The root compacted object is 
 ```json
 {"v": "0.0.1","t": [],"d": []}
