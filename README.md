@@ -61,3 +61,10 @@ Will be decompressed to:
 ```
 
 In case of of arrays of uniform objects the proposed format gives significant decrease of space used.
+
+Comparison of size in the case above:
+```
+{"v":"0.0.1","t":[["name","value"],["name2","value"]],"d":[-1,[0,"test","test2"],[1,"yyy",[0,"xxx",2]]]}
+[{"name": "test","value": "test2"},{"name2": "yyy","value": {"name": "xxx","value": 2}}]
+```
+
