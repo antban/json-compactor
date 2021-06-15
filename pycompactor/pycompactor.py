@@ -82,9 +82,9 @@ def __main(path):
     c_data = json.dumps(compacted_data['d'])
     c_all = json.dumps(compacted_data)
 
-    print('Compression. Type system: %d, data: %d. Total: %d, Source: %d. Compaction: %f' % (len(types), len(c_data), len(c_all), source_size, (100.*len(c_all))/source_size))
+    print('Compaction. Type system: %d, data: %d. Total: %d, Source: %d. Compacted size: %f %%' % (len(types), len(c_data), len(c_all), source_size, (100.*len(c_all))/source_size))
 
-    print('Uncompressed data size: %d' % (len(json.dumps(depack(json.loads(c_all)))),))
+    print('Uncompacted data size: %d' % (len(json.dumps(depack(json.loads(c_all)))),))
 
 
 if __name__ == '__main__':
