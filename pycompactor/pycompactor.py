@@ -79,7 +79,7 @@ def __main(path):
     source_size = len(json.dumps(data))
     compacted_data = pack(data)
     types = json.dumps(compacted_data['t'])
-    c_data = json.dumps(compacted_data['v'])
+    c_data = json.dumps(compacted_data['d'])
     c_all = json.dumps(compacted_data)
 
     print('Compression. Type system: %d, data: %d. Total: %d, Source: %d. Compaction: %f' % (len(types), len(c_data), len(c_all), source_size, (100.*len(c_all))/source_size))
